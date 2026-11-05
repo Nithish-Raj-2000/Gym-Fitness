@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nutrition — Stackly Gym &amp; Fitness</title>
+  <meta name="description" content="Your Stackly nutrition tracker — macros, meal log and hydration. (Demo data.)">
+  <link rel="icon" href="stackly-logo-icon.webp" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=13">
+  <script src="assets/js/site.js?v=13" defer></script>
+</head>
+<body data-page="customer-nutrition">
+<a class="skip-link" href="#dash-main">Skip to dashboard</a>
+
+<div class="dash-shell" data-dashboard>
+
+  <div data-dash-sidebar></div>
+
+  <main id="dash-main" class="dash-main">
+    <div class="dash-topbar">
+      <button class="dash-burger" type="button" data-dash-burger aria-label="Open navigation" aria-controls="dash-sidebar"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg></button>
+      
+      <div class="dash-hello">
+        <h1>Nutrition</h1>
+        <p>Daily macros, meal log and hydration</p>
+      </div>
+      <button class="dash-bell dash-action" type="button" data-demo aria-label="Notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg><span class="dot" aria-hidden="true"></span></button>
+    </div>
+
+    <!-- MACROS -->
+    <div class="card dash-panel">
+      <div class="dash-panel-head"><div><h3>Daily targets</h3><p>Today vs your coach-set targets</p></div><button class="button button--dark dash-action" type="button" data-demo>Log meal</button></div>
+      <div class="meter" style="gap:.55rem">
+        <div class="meter-row"><b>Protein — 132g target</b><span class="meter-track"><span class="meter-fill" data-val="84"></span></span><span class="meter-val">111g · 84%</span></div>
+        <div class="meter-row"><b>Carbs — 260g target</b><span class="meter-track"><span class="meter-fill" data-val="68"></span></span><span class="meter-val">177g · 68%</span></div>
+        <div class="meter-row"><b>Fat — 70g target</b><span class="meter-track"><span class="meter-fill" data-val="76"></span></span><span class="meter-val">53g · 76%</span></div>
+        <div class="meter-row is-cool"><b>Water — 3.0 L target</b><span class="meter-track"><span class="meter-fill" data-val="60"></span></span><span class="meter-val">1.8 L · 60%</span></div>
+      </div>
+      <div class="chip-row" style="margin-top:1rem">
+        <span class="badge ok">Protein hit 4 of 6 days</span>
+        <span class="badge gold">Cold-bar post-lift shake</span>
+      </div>
+    </div>
+
+    <!-- MEAL LOG -->
+    <div class="card dash-panel panel-hscroll">
+      <div class="dash-panel-head"><div><h3>Meal log</h3><p>Everything logged today</p></div></div>
+      <div class="table-wrap">
+        <table class="table">
+          <thead><tr><th>Meal</th><th>Item</th><th>kcal</th><th>Protein</th></tr></thead>
+          <tbody>
+            <tr><td><b>Breakfast</b></td><td>Greek yogurt bowl + berries</td><td class="num">420</td><td class="num">32g</td></tr>
+            <tr><td><b>Lunch</b></td><td>Grilled chicken rice plate</td><td class="num">680</td><td class="num">48g</td></tr>
+            <tr><td><b>Post-lift</b></td><td>Cold-bar recovery shake</td><td class="num">310</td><td class="num">24g</td></tr>
+            <tr><td><b>Dinner</b></td><td>Salmon + roasted veg (planned)</td><td class="num">—</td><td class="num">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>

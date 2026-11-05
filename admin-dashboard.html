@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Dashboard — Stackly Gym &amp; Fitness</title>
+  <meta name="description" content="Stackly Gym &amp; Fitness admin suite — members, classes, payments, trainer roster and equipment status. (Demo data.)">
+  <link rel="icon" href="stackly-logo-icon.webp" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=13">
+  <script src="assets/js/site.js?v=13" defer></script>
+</head>
+<body data-page="admin-dashboard">
+<a class="skip-link" href="#dash-main">Skip to dashboard</a>
+
+<div class="dash-shell" data-dashboard>
+
+  <div data-dash-sidebar></div>
+
+  <main id="dash-main" class="dash-main">
+    <div class="dash-topbar">
+      <button class="dash-burger" type="button" data-dash-burger aria-label="Open navigation" aria-controls="dash-sidebar"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg></button>
+      
+      <div class="dash-hello">
+        <h1>Admin Dashboard</h1>
+        <p>Members, classes, payments and floor status at a glance</p>
+      </div>
+      <button class="dash-bell dash-action" type="button" data-demo aria-label="Notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg><span class="dot" aria-hidden="true"></span></button>
+    </div>
+
+    <!-- STAT TILES -->
+    <div class="dash-cards">
+      <article class="card stat-tile reveal">
+        <span class="icon-badge"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+        <h4><span data-count="2418">0</span> members</h4><p>1,904 active · 214 on freeze</p><span class="trend">▲ 38 this week</span>
+      </article>
+      <article class="card stat-tile reveal" data-delay="1">
+        <span class="icon-badge icon-badge--lime"><svg viewBox="0 0 24 24"><path d="M2 7h20v12H2zM2 11h20M6 15h4"/></svg></span>
+        <h4><span data-count="182" data-suffix="k">0</span> MRR</h4><p>November recurring revenue</p><span class="trend down">▼ 2.1% vs Oct</span>
+      </article>
+      <article class="card stat-tile reveal" data-delay="2">
+        <span class="icon-badge icon-badge--ember"><svg viewBox="0 0 24 24"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg></span>
+        <h4><span data-count="212">0</span> check-ins</h4><p>Today so far · peak 6–8 PM</p><span class="trend">▲ normal</span>
+      </article>
+      <article class="card stat-tile reveal" data-delay="3">
+        <span class="icon-badge icon-badge--cool"><svg viewBox="0 0 24 24"><path d="M4 8h2v8H4zM20 8h2v8h-2zM8 5h2v14H8zM16 5h2v14h-2z"/></svg></span>
+        <h4><span data-count="96" data-suffix="%">0</span> class fill</h4><p>Next-7-day average occupancy</p><span class="trend">▲ 4 pts</span>
+      </article>
+    </div>
+
+    <!-- MEMBERS -->
+    <div class="card dash-panel panel-hscroll">
+      <div class="dash-panel-head">
+        <div><h3>Member management</h3><p>Latest sign-ups &amp; account health (demo)</p></div>
+        <div class="button-row" style="gap:.6rem">
+          <button class="button button--dark dash-action" type="button" data-demo>Export CSV</button>
+          <button class="button dash-action" type="button" data-demo>Add member</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="table">
+          <thead><tr><th>Member</th><th>Plan</th><th>Benchmark</th><th>Bookings</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td><img class="avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&q=65" alt="" loading="lazy"><b>Priya Raman</b></td><td>Gold</td><td class="num">82%</td><td class="num">14</td><td><span class="badge ok">Active</span></td></tr>
+            <tr><td><img class="avatar" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=80&q=65" alt="" loading="lazy"><b>Jonah Velaquez</b></td><td>Flex</td><td class="num">48%</td><td class="num">6</td><td><span class="badge ok">Active</span></td></tr>
+            <tr><td><img class="avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=80&q=65" alt="" loading="lazy"><b>Emilia Cole</b></td><td>Elite</td><td class="num">93%</td><td class="num">19</td><td><span class="badge ok">Active</span></td></tr>
+            <tr><td><img class="avatar" src="https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=80&q=65" alt="" loading="lazy"><b>Omar Haddad</b></td><td>Gold</td><td class="num">31%</td><td class="num">2</td><td><span class="badge warn">Frozen</span></td></tr>
+            <tr><td><img class="avatar" src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=80&q=65" alt="" loading="lazy"><b>Sana Iqbal</b></td><td>Flex</td><td class="num">55%</td><td class="num">9</td><td><span class="badge info">Invited</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- SCHEDULE + EQUIP -->
+    <div class="grid" style="grid-template-columns:1fr">
+      <div class="card dash-panel">
+        <div class="dash-panel-head"><div><h3>Class schedule control</h3><p>Assign coaches, open waitlists, freeze times</p></div><button class="button dash-action" type="button" data-demo>Edit weekly grid</button></div>
+        <div class="meter" style="gap:.55rem">
+          <div class="meter-row"><b>Mon · Sprint Ignite 45 (6 AM)</b><span class="meter-track"><span class="meter-fill" data-val="94"></span></span><span class="meter-val">94% full</span></div>
+          <div class="meter-row"><b>Wed · Peak Powerlifting (6 PM)</b><span class="meter-track"><span class="meter-fill" data-val="81"></span></span><span class="meter-val">81% full</span></div>
+          <div class="meter-row is-cool"><b>Fri · Aligned Mobility (9:30 AM)</b><span class="meter-track"><span class="meter-fill" data-val="47"></span></span><span class="meter-val">47% full</span></div>
+          <div class="meter-row"><b>Sat · Corner Crew (7:30 AM)</b><span class="meter-track"><span class="meter-fill" data-val="100"></span></span><span class="meter-val">Waitlist</span></div>
+        </div>
+      </div>
+      <div class="card dash-panel panel-hscroll">
+        <div class="dash-panel-head"><div><h3>Equipment status</h3><p>Service logs from floor-tech sweep at 4:30 AM</p></div><button class="button button--dark dash-action" type="button" data-demo>Open floor map</button></div>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th>Rig / item</th><th>Zone</th><th>Last service</th><th>Lift rating</th><th>State</th></tr></thead>
+            <tbody>
+              <tr><td><b>Rack row A</b></td><td>Strength alley</td><td>02 Nov</td><td class="num">8 / 8</td><td><span class="badge ok">All good</span></td></tr>
+              <tr><td><b>Curved treads</b></td><td>Cardio pods</td><td>03 Nov</td><td class="num">5 / 6</td><td><span class="badge warn">#4 in service</span></td></tr>
+              <tr><td><b>Rower dock 2</b></td><td>HIT turf</td><td>01 Nov</td><td class="num">1 / 2</td><td><span class="badge warn">Chain wear</span></td></tr>
+              <tr><td><b>Sauna suite 3</b></td><td>Recovery</td><td>28 Oct</td><td class="num">2 / 2</td><td><span class="badge ok">All good</span></td></tr>
+              <tr><td><b>Air-bike lane 7</b></td><td>HIT turf</td><td>—</td><td class="num">0 / 1</td><td><span class="badge info">Order placed</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRAINERS + REPORTS -->
+    <div class="grid" style="grid-template-columns:1fr">
+      <div class="card dash-panel panel-hscroll">
+        <div class="dash-panel-head"><div><h3>Trainer roster</h3><p>Assigned coverage headcount this week</p></div><button class="button dash-action" type="button" data-demo>Manage roster</button></div>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th>Coach</th><th>Specialism</th><th>Sessions</th><th>Member rating</th><th>Load</th></tr></thead>
+            <tbody>
+              <tr><td><img class="avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=65" alt="" loading="lazy"><b>Marcus Kane</b></td><td>Strength</td><td class="num">26</td><td class="num">4.9</td><td><span class="badge warn">Heavy</span></td></tr>
+              <tr><td><img class="avatar" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=80&q=65" alt="" loading="lazy"><b>Alia Brooks</b></td><td>HIIT</td><td class="num">21</td><td class="num">4.8</td><td><span class="badge ok">Balanced</span></td></tr>
+              <tr><td><img class="avatar" src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=80&q=65" alt="" loading="lazy"><b>Daniel Reyes</b></td><td>Mobility</td><td class="num">15</td><td class="num">5.0</td><td><span class="badge ok">Balanced</span></td></tr>
+              <tr><td><img class="avatar" src="https://images.unsplash.com/photo-1546483875-ad9014c88eba?auto=format&fit=crop&w=80&q=65" alt="" loading="lazy"><b>Naomi Ortiz</b></td><td>Boxing</td><td class="num">18</td><td class="num">4.9</td><td><span class="badge info">Cover Fri</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card dash-panel">
+        <div class="dash-panel-head"><div><h3>Recovered revenue</h3><p>Members by acquisition channel &amp; renewal outlook</p></div></div>
+        <ul class="bars" style="margin:0;padding:0">
+          <li><i style="height:78%"></i><span>Floor</span></li>
+          <li><i style="height:92%"></i><span>Refs</span></li>
+          <li><i style="height:61%"></i><span>Corp</span></li>
+          <li><i style="height:70%"></i><span>Ads</span></li>
+          <li><i style="height:64%"></i><span>Social</span></li>
+          <li><i style="height:55%"></i><span>Events</span></li>
+          <li><i style="height:84%"></i><span>Trial</span></li>
+        </ul>
+        <div class="chip-row" style="margin-top:1rem">
+          <span class="badge ok">Monthly renewals 94%</span>
+          <span class="badge gold">Avg member stays 14.3 mo</span>
+          <span class="badge info">Trial → member 38%</span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>

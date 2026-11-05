@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Equipment Status — Stackly Gym &amp; Fitness</title>
+  <meta name="description" content="Stackly admin — floor equipment health, service logs and parts on order. (Demo data.)">
+  <link rel="icon" href="stackly-logo-icon.webp" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=13">
+  <script src="assets/js/site.js?v=13" defer></script>
+</head>
+<body data-page="admin-equipment">
+<a class="skip-link" href="#dash-main">Skip to dashboard</a>
+
+<div class="dash-shell" data-dashboard>
+
+  <div data-dash-sidebar></div>
+
+  <main id="dash-main" class="dash-main">
+    <div class="dash-topbar">
+      <button class="dash-burger" type="button" data-dash-burger aria-label="Open navigation" aria-controls="dash-sidebar"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg></button>
+      
+      <div class="dash-hello">
+        <h1>Equipment Status</h1>
+        <p>Floor health, service logs and parts on order</p>
+      </div>
+      <button class="dash-bell dash-action" type="button" data-demo aria-label="Notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg><span class="dot" aria-hidden="true"></span></button>
+    </div>
+
+    <!-- STATUS TILES -->
+    <div class="dash-cards">
+      <article class="card stat-tile reveal">
+        <span class="icon-badge icon-badge--lime"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span>
+        <h4><span data-count="118">0</span> units</h4><p>Tracked across all zones</p><span class="trend">113 in service</span>
+      </article>
+      <article class="card stat-tile reveal" data-delay="1">
+        <span class="icon-badge icon-badge--ember"><svg viewBox="0 0 24 24"><path d="M12 9v4M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 17h.01"/></svg></span>
+        <h4><span data-count="3">0</span> open issues</h4><p>Reported at the 4:30 AM sweep</p><span class="trend">All triaged</span>
+      </article>
+      <article class="card stat-tile reveal" data-delay="2">
+        <span class="icon-badge icon-badge--cool"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+        <h4><span data-count="2">0</span> on order</h4><p>Replacement parts inbound</p><span class="trend">ETA Fri</span>
+      </article>
+      <article class="card stat-tile reveal" data-delay="3">
+        <span class="icon-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+        <h4><span data-count="96" data-suffix="%">0</span> uptime</h4><p>Floor equipment availability</p><span class="trend">▲ target 95%</span>
+      </article>
+    </div>
+
+    <!-- EQUIPMENT TABLE -->
+    <div class="card dash-panel panel-hscroll">
+      <div class="dash-panel-head"><div><h3>Service log</h3><p>Latest floor-tech sweep at 4:30 AM</p></div><button class="button button--dark dash-action" type="button" data-demo>Open floor map</button></div>
+      <div class="table-wrap">
+        <table class="table">
+          <thead><tr><th>Rig / item</th><th>Zone</th><th>Last service</th><th>Lift rating</th><th>State</th></tr></thead>
+          <tbody>
+            <tr><td><b>Rack row A</b></td><td>Strength alley</td><td>02 Nov</td><td class="num">8 / 8</td><td><span class="badge ok">All good</span></td></tr>
+            <tr><td><b>Curved treads</b></td><td>Cardio pods</td><td>03 Nov</td><td class="num">5 / 6</td><td><span class="badge warn">#4 in service</span></td></tr>
+            <tr><td><b>Rower dock 2</b></td><td>HIT turf</td><td>01 Nov</td><td class="num">1 / 2</td><td><span class="badge warn">Chain wear</span></td></tr>
+            <tr><td><b>Sauna suite 3</b></td><td>Recovery</td><td>28 Oct</td><td class="num">2 / 2</td><td><span class="badge ok">All good</span></td></tr>
+            <tr><td><b>Air-bike lane 7</b></td><td>HIT turf</td><td>—</td><td class="num">0 / 1</td><td><span class="badge info">Order placed</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>

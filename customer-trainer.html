@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Trainer — Stackly Gym &amp; Fitness</title>
+  <meta name="description" content="Your Stackly coach — next 1:1 reviews, session notes and messages. (Demo data.)">
+  <link rel="icon" href="stackly-logo-icon.webp" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=13">
+  <script src="assets/js/site.js?v=13" defer></script>
+</head>
+<body data-page="customer-trainer">
+<a class="skip-link" href="#dash-main">Skip to dashboard</a>
+
+<div class="dash-shell" data-dashboard>
+
+  <div data-dash-sidebar></div>
+
+  <main id="dash-main" class="dash-main">
+    <div class="dash-topbar">
+      <button class="dash-burger" type="button" data-dash-burger aria-label="Open navigation" aria-controls="dash-sidebar"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg></button>
+      
+      <div class="dash-hello">
+        <h1>My Trainer</h1>
+        <p>Your coach, next sessions and direct messages</p>
+      </div>
+      <button class="dash-bell dash-action" type="button" data-demo aria-label="Notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg><span class="dot" aria-hidden="true"></span></button>
+    </div>
+
+    <!-- COACH CARD -->
+    <div class="card dash-panel book-grid" style="grid-template-columns:1fr">
+      <div class="book-card">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=68" alt="Your coach Marcus Kane" loading="lazy">
+        <div><b>Marcus Kane — your coach</b><p>Next 1:1 review: Thu 5:30 PM · floor pod B</p><span class="book-meta">Reply rate 99% · avg 45 min</span></div>
+        <button class="button button--dark dash-action" style="margin-left:auto;flex:none" type="button" data-demo>Message</button>
+      </div>
+      <div class="book-card">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=68" alt="Cover coach Alia Brooks" loading="lazy">
+        <div><b>Alia Brooks — cover coach</b><p>Covers Tue &amp; Thu morning classes</p><span class="book-meta">Reply rate 97% · avg 1 h</span></div>
+        <button class="button button--dark dash-action" style="margin-left:auto;flex:none" type="button" data-demo>Message</button>
+      </div>
+    </div>
+
+    <!-- SESSION NOTES -->
+    <div class="card dash-panel panel-hscroll">
+      <div class="dash-panel-head"><div><h3>Session notes &amp; feedback</h3><p>Coach notes from your recent reviews</p></div><button class="button dash-action" type="button" data-demo>Book 1:1</button></div>
+      <div class="table-wrap">
+        <table class="table">
+          <thead><tr><th>Date</th><th>Topic</th><th>Note</th></tr></thead>
+          <tbody>
+            <tr><td><b>29 Oct</b></td><td>Squat depth</td><td>Depth improved — keep the pause reps for 2 more weeks.</td></tr>
+            <tr><td><b>22 Oct</b></td><td>Mobility block</td><td>Added daily hip flow. Log ankles after heavy days.</td></tr>
+            <tr><td><b>15 Oct</b></td><td>Nutrition</td><td>Protein target raised to 132g. Cold-bar shake post-lift.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>

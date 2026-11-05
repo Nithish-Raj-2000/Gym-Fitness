@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>mobileshot scroll</title>
+<style>html,body{margin:0;background:#000}iframe{width:320px;height:844px;border:0;outline:0}</style></head>
+<body><iframe id="f"></iframe>
+<script>
+const q=new URLSearchParams(location.search);
+const f=document.getElementById('f');
+f.src=q.get('p')+'.html';
+const y=+q.get('y')||0;
+const doScroll=()=>{try{f.contentWindow.scrollTo({top:y,behavior:'instant'});f.contentWindow.scrollTo(0,y);}catch(e){}};
+f.addEventListener('load',()=>{doScroll();setTimeout(doScroll,400);setTimeout(doScroll,1200);});
+setTimeout(doScroll,250);setTimeout(doScroll,900);
+</script>
+</body></html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign up — Stackly Gym &amp; Fitness</title>
+  <meta name="description" content="Create your Stackly Gym &amp; Fitness account as a member or admin and unlock your personal dashboard and plan.">
+  <link rel="icon" href="stackly-logo-icon.webp" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=13">
+  <script src="assets/js/site.js?v=13" defer></script>
+</head>
+<body data-page="signup">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="auth-shell">
+
+  <!-- BRAND PANEL -->
+  <section class="auth-panel" aria-label="Join Stackly Gym and Fitness">
+    <img class="auth-bg" src="https://images.unsplash.com/photo-1546483875-ad9014c88eba?auto=format&fit=crop&w=1200&q=66" alt="Member mid-training under dramatic gym light" fetchpriority="high">
+    <div class="auth-grid3" aria-hidden="true"></div>
+    <div class="auth-orb" style="right:10%;top:14%" aria-hidden="true"><i></i><i></i><i></i></div>
+    <button class="back-fab back-fab--panel" type="button" data-go-back><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></i><span>Go back</span></button>
+    <div class="auth-panel-inner">
+      <a class="brand" href="index.html"><img src="stackly-logo-icon.webp" alt="Stackly Gym &amp; Fitness logo" width="42" height="42"><span>STACKLY<small>Gym &amp; Fitness</small></span></a>
+      <p class="auth-quote">Sign up now and your <em>90-day plan</em> unlocks instantly in your dashboard.</p>
+      <ul class="auth-points" style="list-style:none;margin:0">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Free intake benchmark + movement screen</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Saved demo profile — browser-only, totally private</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>7-day trial offered at the front desk</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <main class="auth-main" id="main">
+    <button class="back-fab" type="button" data-go-back><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></i><span>Go back</span></button>
+    <div class="auth-brandrow">
+      <span class="eyebrow">Join the club</span>
+    </div>
+    <h1 class="auth-title">Create your <em>account</em></h1>
+    <p class="section-lead">Takes under a minute. Then log in and meet your dashboard.</p>
+
+    <form class="card form-card auth-card" data-signup novalidate>
+      <div class="field">
+        <span id="ar-lb" style="display:block;font-size:.82rem;font-weight:600;color:#c9d0dc;margin-bottom:.5rem">Choose your account role<span class="req" aria-hidden="true">*</span></span>
+        <div class="role-cards" data-role-group role="group" aria-labelledby="ar-lb">
+          <button class="role-card is-active" type="button" data-role-card="customer"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><strong><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg> Member</strong><span>Book classes, track plans &amp; progress</span></button>
+          <button class="role-card" type="button" data-role-card="admin"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><strong><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path d="M9 12l2 2 4-4"/></svg> Admin</strong><span>Run the floor, staff &amp; payments</span></button>
+        </div>
+        <input type="hidden" name="role" value="customer">
+      </div>
+
+      <div class="field-row">
+        <div class="field" data-field="name">
+          <label for="s-name">Full name<span class="req" aria-hidden="true">*</span></label>
+          <input id="s-name" name="name" type="text" data-validate="name" autocomplete="name" placeholder="e.g. Priya Raman" required>
+          <p class="field-msg" role="alert"><i></i><span></span></p>
+        </div>
+        <div class="field" data-field="phone">
+          <label for="s-phone">Phone (10 digits)<span class="req" aria-hidden="true">*</span></label>
+          <input id="s-phone" name="phone" type="tel" data-validate="phone" inputmode="numeric" maxlength="10" autocomplete="tel" placeholder="5551234567" required>
+          <p class="field-msg" role="alert"><i></i><span></span></p>
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field" data-field="email">
+          <label for="s-email">Email<span class="req" aria-hidden="true">*</span></label>
+          <input id="s-email" name="email" type="email" data-validate="email" inputmode="email" autocomplete="email" placeholder="you@email.com" required>
+          <p class="field-msg" role="alert"><i></i><span></span></p>
+        </div>
+        <div class="field">
+          <label for="s-goal" id="s-goal-lb">Main goal<span class="req" aria-hidden="true">*</span></label>
+          <div class="select-wrap" data-select>
+            <input type="hidden" name="goal">
+            <button class="select-trigger" type="button" data-placeholder="Choose a goal" aria-labelledby="s-goal-lb" aria-haspopup="listbox" aria-expanded="false">
+              <span class="label">Choose a goal</span>
+              <svg class="caret" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="select-menu" role="listbox" aria-label="Main goal">
+              <button type="button" data-value="Fat loss">Fat loss</button>
+              <button type="button" data-value="Muscle gain">Muscle gain</button>
+              <button type="button" data-value="Athletic performance">Athletic performance</button>
+              <button type="button" data-value="General fitness">General fitness</button>
+              <button type="button" data-value="Rehab / return to training">Rehab / return to training</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field" data-field="password">
+          <label for="s-pass">Password<span class="req" aria-hidden="true">*</span></label>
+          <div class="pwd-wrap">
+            <input id="s-pass" name="password" type="password" data-validate="password" autocomplete="new-password" placeholder="8+ chars · mixed case · 1 number · 1 symbol" required>
+            <button class="pwd-toggle" type="button" aria-label="Show password"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
+          </div>
+          <div class="strength" aria-hidden="true"><i></i><i></i><i></i></div>
+          <p class="field-msg" role="alert"><i></i><span></span></p>
+        </div>
+        <div class="field" data-field="confirm">
+          <label for="s-confirm">Confirm password<span class="req" aria-hidden="true">*</span></label>
+          <div class="pwd-wrap">
+            <input id="s-confirm" name="confirm" type="password" autocomplete="new-password" placeholder="Repeat your password" required>
+            <button class="pwd-toggle" type="button" aria-label="Show password"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
+          </div>
+          <p class="field-msg" role="alert"><i></i><span></span></p>
+        </div>
+      </div>
+
+      <div class="field" data-field="consent">
+        <label class="check" for="s-consent">
+          <input id="s-consent" type="checkbox" name="consent" required>
+          <span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span>I agree to the <a href="404.html" data-demo>terms</a> and <a href="404.html" data-demo>privacy policy</a>.</span>
+        </label>
+        <p class="field-msg" role="alert"><i></i><span></span></p>
+      </div>
+
+      <button class="button button--lg" type="submit" style="width:100%">Create account <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+
+      <div class="auth-alt" style="justify-content:center;margin-top:1rem">
+        <span>Already a member?</span><a href="login.html">Log in instead</a>
+      </div>
+      <p class="demo-creds" style="margin-top:.9rem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg><span>Demo safe — accounts are stored only in this browser and never synced online.</span></p>
+    </form>
+  </main>
+</div>
+</body>
+</html>

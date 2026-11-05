@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book Classes — Stackly Gym &amp; Fitness</title>
+  <meta name="description" content="Book gym classes at Stackly — your bookings and open spots for the coming week. (Demo data.)">
+  <link rel="icon" href="stackly-logo-icon.webp" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=13">
+  <script src="assets/js/site.js?v=13" defer></script>
+</head>
+<body data-page="customer-classes">
+<a class="skip-link" href="#dash-main">Skip to dashboard</a>
+
+<div class="dash-shell" data-dashboard>
+
+  <div data-dash-sidebar></div>
+
+  <main id="dash-main" class="dash-main">
+    <div class="dash-topbar">
+      <button class="dash-burger" type="button" data-dash-burger aria-label="Open navigation" aria-controls="dash-sidebar"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg></button>
+      
+      <div class="dash-hello">
+        <h1>Book Classes</h1>
+        <p>Your upcoming bookings and open spots this week</p>
+      </div>
+      <button class="dash-bell dash-action" type="button" data-demo aria-label="Notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg><span class="dot" aria-hidden="true"></span></button>
+    </div>
+
+    <!-- MY BOOKINGS -->
+    <div class="card dash-panel panel-hscroll">
+      <div class="dash-panel-head">
+        <div><h3>My booked classes</h3><p>Times shown for the next 7 days</p></div>
+      </div>
+      <div class="table-wrap">
+        <table class="table">
+          <thead><tr><th>Class</th><th>Coach</th><th>When</th><th>Spot</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td><b>Sprint Ignite 45</b></td><td>Alia Brooks</td><td>Mon · 6:00 AM</td><td class="num">7/16</td><td><span class="badge ok">Confirmed</span></td></tr>
+            <tr><td><b>Aligned Mobility</b></td><td>Daniel Reyes</td><td>Tue · 9:30 AM</td><td class="num">11/20</td><td><span class="badge ok">Confirmed</span></td></tr>
+            <tr><td><b>Iron Foundations</b></td><td>Marcus Kane</td><td>Wed · 6:00 PM</td><td class="num">3/12</td><td><span class="badge info">Waitlist #1</span></td></tr>
+            <tr><td><b>Corner Crew</b></td><td>Naomi Ortiz</td><td>Fri · 7:30 PM</td><td class="num">8/14</td><td><span class="badge warn">Payment pending</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- OPEN CLASSES -->
+    <div class="card dash-panel">
+      <div class="dash-panel-head">
+        <div><h3>Open classes this week</h3><p>Spots still available to book</p></div>
+        <button class="button button--dark dash-action" type="button" data-demo>Booking rules</button>
+      </div>
+      <div class="book-grid" style="grid-template-columns:1fr">
+        <div class="book-card">
+          <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=200&q=68" alt="Peak Powerlifting session" loading="lazy">
+          <div><b>Peak Powerlifting</b><p>Wed · 6:00 PM · platform room</p><span class="book-meta">10 / 12 spots left · Coach Marcus Kane</span></div>
+          <button class="button button--dark dash-action" style="margin-left:auto;flex:none" type="button" data-demo>Book now</button>
+        </div>
+        <div class="book-card">
+          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=200&q=68" alt="Sunrise mobility flow" loading="lazy">
+          <div><b>Sunrise Mobility</b><p>Sun · 8:30 AM · studio 2</p><span class="book-meta">14 / 20 spots left · Coach Daniel Reyes</span></div>
+          <button class="button button--dark dash-action" style="margin-left:auto;flex:none" type="button" data-demo>Book now</button>
+        </div>
+        <div class="book-card">
+          <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=200&q=68" alt="HIT turf conditioning" loading="lazy">
+          <div><b>HIT Turf 30</b><p>Sat · 9:00 AM · HIT turf</p><span class="book-meta">5 / 14 spots left · Coach Alia Brooks</span></div>
+          <button class="button button--dark dash-action" style="margin-left:auto;flex:none" type="button" data-demo>Book now</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>

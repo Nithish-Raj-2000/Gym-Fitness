@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payments &amp; Invoices — Stackly Gym &amp; Fitness</title>
+  <meta name="description" content="Your Stackly billing — membership invoices, payment methods and billing history. (Demo data.)">
+  <link rel="icon" href="stackly-logo-icon.webp" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=13">
+  <script src="assets/js/site.js?v=13" defer></script>
+</head>
+<body data-page="customer-payments">
+<a class="skip-link" href="#dash-main">Skip to dashboard</a>
+
+<div class="dash-shell" data-dashboard>
+
+  <div data-dash-sidebar></div>
+
+  <main id="dash-main" class="dash-main">
+    <div class="dash-topbar">
+      <button class="dash-burger" type="button" data-dash-burger aria-label="Open navigation" aria-controls="dash-sidebar"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg></button>
+      
+      <div class="dash-hello">
+        <h1>Payments &amp; Invoices</h1>
+        <p>Membership invoices and billing history</p>
+      </div>
+      <button class="dash-bell dash-action" type="button" data-demo aria-label="Notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg><span class="dot" aria-hidden="true"></span></button>
+    </div>
+
+    <!-- MEMBERSHIP + METHOD -->
+    <div class="dash-cards">
+      <article class="card stat-tile reveal">
+        <span class="icon-badge icon-badge--lime"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span>
+        <h4>$<span data-count="59">0</span>/mo</h4><p>Gold membership · renews 4 Dec</p><span class="trend">Auto-pay on</span>
+      </article>
+      <article class="card stat-tile reveal" data-delay="1">
+        <span class="icon-badge"><svg viewBox="0 0 24 24"><path d="M2 7h20v12H2zM2 11h20M6 15h4"/></svg></span>
+        <h4>Visa •• 4412</h4><p>Default payment method</p><span class="trend">Expires 09 / 28</span>
+      </article>
+      <article class="card stat-tile reveal" data-delay="2">
+        <span class="icon-badge icon-badge--ember"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+        <h4><span data-count="8">0</span> payments</h4><p>Successful since you joined</p><span class="trend">Never missed</span>
+      </article>
+      <article class="card stat-tile reveal" data-delay="3">
+        <span class="icon-badge icon-badge--cool"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></span>
+        <h4>$<span data-count="471">0</span> lifetime</h4><p>Paid to Stackly in total</p><span class="trend">2025 – 2026</span>
+      </article>
+    </div>
+
+    <!-- INVOICES -->
+    <div class="card dash-panel panel-hscroll">
+      <div class="dash-panel-head"><div><h3>Invoices</h3><p>Latest billing activity (demo data)</p></div><button class="button button--dark dash-action" type="button" data-demo>Manage billing</button></div>
+      <div class="table-wrap">
+        <table class="table">
+          <thead><tr><th>Invoice</th><th>Date</th><th>Item</th><th>Amount</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td class="num">INV-1042</td><td>04 Nov 2026</td><td>Gold membership — Nov</td><td class="num">$59.00</td><td><span class="badge ok">Paid</span></td></tr>
+            <tr><td class="num">INV-1021</td><td>04 Oct 2026</td><td>Gold membership — Oct</td><td class="num">$59.00</td><td><span class="badge ok">Paid</span></td></tr>
+            <tr><td class="num">INV-0998</td><td>22 Sep 2026</td><td>Compact scan add-on</td><td class="num">$19.00</td><td><span class="badge ok">Paid</span></td></tr>
+            <tr><td class="num">INV-1013</td><td>18 Oct 2026</td><td>Boxing glove rental</td><td class="num">$8.00</td><td><span class="badge off">Refunded</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>probe</title><style>iframe{border:0}</style></head>
+<body>
+<pre id="report">PROBE-START</pre>
+<script>
+const pages=["index.html","about.html","programs.html","trainers.html","pricing.html","contact.html","login.html","signup.html","404.html","404dash.html","admin-dashboard.html","customer-dashboard.html","admin-members.html","customer-classes.html"];
+const out=[];
+let page='';
+function probe(frame){
+  return new Promise(res=>{
+    let done=false;
+    const fin=async()=>{
+      if(done)return; done=true;
+      await new Promise(r=>setTimeout(r,600));
+      try{
+        const d=frame.contentDocument, w=frame.contentWindow;
+        const iw=w.innerWidth, sw=d.documentElement.scrollWidth;
+        const offenders=[];
+        for(const el of d.querySelectorAll('*')){
+          const r=el.getBoundingClientRect();
+          if(r.width>0 && r.right>iw+1 && r.left<iw){
+            const cs=w.getComputedStyle(el);
+            if(cs.position==='fixed')continue;
+            const cls=(typeof el.className==='string'?el.className:'').trim();
+            offenders.push(el.tagName.toLowerCase()+'.'+cls+' R='+Math.round(r.right));
+          }
+        }
+        offenders.sort((a,b)=>parseFloat(b.split('R=')[1])-parseFloat(a.split('R=')[1]));
+        out.push(page+' | innerW='+iw+' docScroll='+sw+' | '+(offenders.slice(0,2).join(' || ')||'CLEAN'));
+      }catch(e){out.push(page+' ERR '+e.message);}
+      res();
+    };
+    frame.addEventListener('load',fin);
+    setTimeout(fin,2200);
+  });
+}
+(async()=>{
+  for(const p of pages){
+    const f=document.createElement('iframe');
+    f.style.cssText='width:320px;height:900px';
+    page=p;
+    f.src=p+'?probe'; document.body.appendChild(f);
+    await probe(f);
+    f.remove();
+  }
+  document.getElementById('report').textContent='RESULTS\n'+out.join('\n');
+})();
+</script>
+</body></html>

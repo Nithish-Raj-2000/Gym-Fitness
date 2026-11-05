@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Progress Tracker — Stackly Gym &amp; Fitness</title>
+  <meta name="description" content="Your Stackly progress tracker — weekly output, metrics and milestones. (Demo data.)">
+  <link rel="icon" href="stackly-logo-icon.webp" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=13">
+  <script src="assets/js/site.js?v=13" defer></script>
+</head>
+<body data-page="customer-progress">
+<a class="skip-link" href="#dash-main">Skip to dashboard</a>
+
+<div class="dash-shell" data-dashboard>
+
+  <div data-dash-sidebar></div>
+
+  <main id="dash-main" class="dash-main">
+    <div class="dash-topbar">
+      <button class="dash-burger" type="button" data-dash-burger aria-label="Open navigation" aria-controls="dash-sidebar"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg></button>
+      
+      <div class="dash-hello">
+        <h1>Progress Tracker</h1>
+        <p>Weekly output, body metrics and milestones</p>
+      </div>
+      <button class="dash-bell dash-action" type="button" data-demo aria-label="Notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg><span class="dot" aria-hidden="true"></span></button>
+    </div>
+
+    <!-- WEEKLY OUTPUT -->
+    <div class="card dash-panel">
+      <div class="dash-panel-head"><div><h3>Weekly burn</h3><p>kcal per filled session bar</p></div><span class="badge gold">Gold week</span></div>
+      <ul class="bars" style="margin:0;padding:0">
+        <li><i style="height:64%"></i><span>M</span></li>
+        <li><i style="height:78%"></i><span>T</span></li>
+        <li><i style="height:52%"></i><span>W</span></li>
+        <li><i style="height:88%"></i><span>T</span></li>
+        <li><i style="height:70%"></i><span>F</span></li>
+        <li><i style="height:95%"></i><span>S</span></li>
+        <li><i style="height:36%"></i><span>S</span></li>
+      </ul>
+    </div>
+
+    <!-- RING + MILESTONES -->
+    <div class="grid grid-3" style="grid-template-columns:1fr">
+      <div class="card dash-panel">
+        <div class="dash-panel-head"><div><h3>Block progress</h3><p>90-day transformation · week 6</p></div></div>
+        <div style="display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap">
+          <svg class="ring" width="110" height="110" viewBox="0 0 110 110" aria-hidden="true">
+            <defs><linearGradient id="gradRing" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b6f04e"/><stop offset="1" stop-color="#ff5d3a"/></linearGradient></defs>
+            <circle class="bgc" cx="55" cy="55" r="46"></circle>
+            <circle class="fgc" cx="55" cy="55" r="46" stroke-dasharray="289" stroke-dashoffset="52"></circle>
+            <text x="55" y="61" text-anchor="middle" fill="#f3f5f9" font-size="18" font-family="Poppins" font-weight="700" transform="rotate(90 55 55)">82%</text>
+          </svg>
+          <div style="display:grid;gap:.45rem">
+            <span class="badge ok">Aerobic base · ahead</span>
+            <span class="badge warn">Hip mobility · watch</span>
+            <span class="badge info">Body-fat −4.1% since intake</span>
+          </div>
+        </div>
+      </div>
+      <div class="card dash-panel panel-hscroll">
+        <div class="dash-panel-head"><div><h3>Milestones</h3><p>Key markers from your last check-ins</p></div><button class="button dash-action" type="button" data-demo>Log result</button></div>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th>Milestone</th><th>Start</th><th>Now</th><th>Change</th></tr></thead>
+            <tbody>
+              <tr><td><b>Deadlift 1RM</b></td><td class="num">90 kg</td><td class="num">115 kg</td><td><span class="badge ok">+25 kg</span></td></tr>
+              <tr><td><b>Body-fat %</b></td><td class="num">27.4</td><td class="num">23.3</td><td><span class="badge ok">−4.1</span></td></tr>
+              <tr><td><b>5 km pace</b></td><td class="num">7:20/km</td><td class="num">6:31/km</td><td><span class="badge ok">−49s</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>

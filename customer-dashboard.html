@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Member Dashboard — Stackly Gym &amp; Fitness</title>
+  <meta name="description" content="Your Stackly membership dashboard — plan, bookings, progress, nutrition and payments in one place. (Demo data.)">
+  <link rel="icon" href="stackly-logo-icon.webp" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=13">
+  <script src="assets/js/site.js?v=13" defer></script>
+</head>
+<body data-page="customer-dashboard">
+<a class="skip-link" href="#dash-main">Skip to dashboard</a>
+
+<div class="dash-shell" data-dashboard>
+
+  <div data-dash-sidebar></div>
+
+  <main id="dash-main" class="dash-main">
+    <div class="dash-topbar">
+      <button class="dash-burger" type="button" data-dash-burger aria-label="Open navigation" aria-controls="dash-sidebar"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg></button>
+      
+      <div class="dash-hello">
+        <h1>Member Dashboard</h1>
+        <p>Plan, bookings, progress and billing in one place</p>
+      </div>
+      <button class="dash-bell dash-action" type="button" data-demo aria-label="Notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg><span class="dot" aria-hidden="true"></span></button>
+    </div>
+
+    <!-- STAT TILES -->
+    <div class="dash-cards">
+      <article class="card stat-tile reveal">
+        <span class="icon-badge"><svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="4"/></svg></span>
+        <h4><span data-count="640">0</span> kcal</h4><p>Burned today · target 700</p><span class="trend">▲ 6% vs last week</span>
+      </article>
+      <article class="card stat-tile reveal" data-delay="1">
+        <span class="icon-badge icon-badge--ember"><svg viewBox="0 0 24 24"><path d="M4 8h2v8H4zM20 8h2v8h-2zM8 5h2v14H8zM16 5h2v14h-2z"/></svg></span>
+        <h4><span data-count="14">0</span> sessions</h4><p>Booked this month · 10/14 done</p><span class="trend">▲ 2 ahead</span>
+      </article>
+      <article class="card stat-tile reveal" data-delay="2">
+        <span class="icon-badge icon-badge--lime"><svg viewBox="0 0 24 24"><path d="M3 17l5-6 4 3 5-8"/><path d="M16 3h4v4"/></svg></span>
+        <h4><span data-count="82" data-suffix="%">0</span> plan</h4><p>Current block completion</p><span class="trend">On track</span>
+      </article>
+      <article class="card stat-tile reveal" data-delay="3">
+        <span class="icon-badge icon-badge--cool"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+        <h4><span data-count="11">0</span> day streak</h4><p>Longest yet — keep the chain</p><span class="trend">🔥 New record</span>
+      </article>
+    </div>
+
+    <!-- TODAY'S WORKOUT + WEEK BARS -->
+    <div class="grid grid-3 dash-panel" style="grid-template-columns:1fr">
+      <div class="card dash-panel">
+        <div class="dash-panel-head">
+          <div><h3>Today&apos;s plan — Lower Power</h3><p>Coach Marcus · 50 min · platform 3</p></div>
+          <button class="button button--dark dash-action" type="button" data-demo>Open workout</button>
+        </div>
+        <div class="meter" style="gap:.55rem">
+          <div class="meter-row"><b>Squat 5×5 @ 65 kg</b><span class="meter-track"><span class="meter-fill" data-val="100"></span></span><span class="meter-val">100%</span></div>
+          <div class="meter-row"><b>RDL 4×8 @ 50 kg</b><span class="meter-track"><span class="meter-fill" data-val="60"></span></span><span class="meter-val">60%</span></div>
+          <div class="meter-row"><b>Split squats 3×12</b><span class="meter-track"><span class="meter-fill" data-val="30"></span></span><span class="meter-val">30%</span></div>
+          <div class="meter-row is-cool"><b>Finisher + core block</b><span class="meter-track"><span class="meter-fill" data-val="40"></span></span><span class="meter-val">40%</span></div>
+        </div>
+      </div>
+      <div class="card dash-panel">
+        <div class="dash-panel-head"><div><h3>Weekly burn</h3><p>kcal per filled session bar</p></div><span class="badge gold">Gold week</span></div>
+        <ul class="bars" style="margin:0;padding:0">
+          <li><i style="height:64%"></i><span>M</span></li>
+          <li><i style="height:78%"></i><span>T</span></li>
+          <li><i style="height:52%"></i><span>W</span></li>
+          <li><i style="height:88%"></i><span>T</span></li>
+          <li><i style="height:70%"></i><span>F</span></li>
+          <li><i style="height:95%"></i><span>S</span></li>
+          <li><i style="height:36%"></i><span>S</span></li>
+        </ul>
+      </div>
+      <div class="card dash-panel">
+        <div class="dash-panel-head"><div><h3>Block progress</h3><p>90-day transformation · week 6</p></div></div>
+        <div style="display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap">
+          <svg class="ring" width="110" height="110" viewBox="0 0 110 110" aria-hidden="true">
+            <defs><linearGradient id="gradRing" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b6f04e"/><stop offset="1" stop-color="#ff5d3a"/></linearGradient></defs>
+            <circle class="bgc" cx="55" cy="55" r="46"></circle>
+            <circle class="fgc" cx="55" cy="55" r="46" stroke-dasharray="289" stroke-dashoffset="52"></circle>
+            <text x="55" y="61" text-anchor="middle" fill="#f3f5f9" font-size="18" font-family="Poppins" font-weight="700" transform="rotate(90 55 55)">82%</text>
+          </svg>
+          <div style="display:grid;gap:.45rem">
+            <span class="badge ok">Aerobic base · ahead</span>
+            <span class="badge warn">Hip mobility · watch</span>
+            <span class="badge info">Body-fat −4.1% since intake</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOOKINGS -->
+    <div class="card dash-panel panel-hscroll">
+      <div class="dash-panel-head">
+        <div><h3>My booked classes</h3><p>Times shown for the next 7 days</p></div>
+        <button class="button dash-action" type="button" data-demo>Book a class</button>
+      </div>
+      <div class="table-wrap">
+        <table class="table">
+          <thead><tr><th>Class</th><th>Coach</th><th>When</th><th>Spot</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td><b>Sprint Ignite 45</b></td><td>Alia Brooks</td><td>Mon · 6:00 AM</td><td class="num">7/16</td><td><span class="badge ok">Confirmed</span></td></tr>
+            <tr><td><b>Aligned Mobility</b></td><td>Daniel Reyes</td><td>Tue · 9:30 AM</td><td class="num">11/20</td><td><span class="badge ok">Confirmed</span></td></tr>
+            <tr><td><b>Iron Foundations</b></td><td>Marcus Kane</td><td>Wed · 6:00 PM</td><td class="num">3/12</td><td><span class="badge info">Waitlist #1</span></td></tr>
+            <tr><td><b>Corner Crew</b></td><td>Naomi Ortiz</td><td>Fri · 7:30 PM</td><td class="num">8/14</td><td><span class="badge warn">Payment pending</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TEAM + INVOICES -->
+    <div class="grid grid-3" style="grid-template-columns:1fr">
+      <div class="card dash-panel book-grid" style="grid-template-columns:1fr">
+        <div class="book-card">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=68" alt="Your coach Marcus Kane" loading="lazy">
+          <div><b>Marcus Kane — your coach</b><p>Next 1:1 review: Thu 5:30 PM · floor pod B</p><span class="book-meta">Reply rate 99% · avg 45 min</span></div>
+          <button class="button button--dark dash-action" style="margin-left:auto;flex:none" type="button" data-demo>Message</button>
+        </div>
+        <div class="book-card">
+          <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=200&q=68" alt="High-protein recovery plate from the Stackly nutrition bar" loading="lazy">
+          <div><b>Nutrition snapshot</b><p>132g protein target · hit 4 of 6 days</p><span class="book-meta">Try the cold-bar post-lift shake</span></div>
+          <button class="button button--dark dash-action" style="margin-left:auto;flex:none" type="button" data-demo>Log meal</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card dash-panel panel-hscroll">
+      <div class="dash-panel-head"><div><h3>Payments &amp; invoices</h3><p>Latest billing activity (demo data)</p></div><button class="button button--dark dash-action" type="button" data-demo>Manage billing</button></div>
+      <div class="table-wrap">
+        <table class="table">
+          <thead><tr><th>Invoice</th><th>Date</th><th>Item</th><th>Amount</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td class="num">INV-1042</td><td>04 Nov 2026</td><td>Gold membership — Nov</td><td class="num">$59.00</td><td><span class="badge ok">Paid</span></td></tr>
+            <tr><td class="num">INV-1021</td><td>04 Oct 2026</td><td>Gold membership — Oct</td><td class="num">$59.00</td><td><span class="badge ok">Paid</span></td></tr>
+            <tr><td class="num">INV-0998</td><td>22 Sep 2026</td><td>Compact scan add-on</td><td class="num">$19.00</td><td><span class="badge ok">Paid</span></td></tr>
+            <tr><td class="num">INV-1013</td><td>18 Oct 2026</td><td>Boxing glove rental</td><td class="num">$8.00</td><td><span class="badge off">Refunded</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>

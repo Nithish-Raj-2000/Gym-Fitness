@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Plan — Stackly Gym &amp; Fitness</title>
+  <meta name="description" content="Your Stackly training plan — today's session, weekly split and block progress. (Demo data.)">
+  <link rel="icon" href="stackly-logo-icon.webp" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=13">
+  <script src="assets/js/site.js?v=13" defer></script>
+</head>
+<body data-page="customer-plan">
+<a class="skip-link" href="#dash-main">Skip to dashboard</a>
+
+<div class="dash-shell" data-dashboard>
+
+  <div data-dash-sidebar></div>
+
+  <main id="dash-main" class="dash-main">
+    <div class="dash-topbar">
+      <button class="dash-burger" type="button" data-dash-burger aria-label="Open navigation" aria-controls="dash-sidebar"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg></button>
+      
+      <div class="dash-hello">
+        <h1>My Plan</h1>
+        <p>Your program, today's session and block progress</p>
+      </div>
+      <button class="dash-bell dash-action" type="button" data-demo aria-label="Notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg><span class="dot" aria-hidden="true"></span></button>
+    </div>
+
+    <!-- TODAY'S PLAN -->
+    <div class="card dash-panel">
+      <div class="dash-panel-head">
+        <div><h3>Today&apos;s plan — Lower Power</h3><p>Coach Marcus · 50 min · platform 3</p></div>
+        <button class="button button--dark dash-action" type="button" data-demo>Open workout</button>
+      </div>
+      <div class="meter" style="gap:.55rem">
+        <div class="meter-row"><b>Squat 5×5 @ 65 kg</b><span class="meter-track"><span class="meter-fill" data-val="100"></span></span><span class="meter-val">100%</span></div>
+        <div class="meter-row"><b>RDL 4×8 @ 50 kg</b><span class="meter-track"><span class="meter-fill" data-val="60"></span></span><span class="meter-val">60%</span></div>
+        <div class="meter-row"><b>Split squats 3×12</b><span class="meter-track"><span class="meter-fill" data-val="30"></span></span><span class="meter-val">30%</span></div>
+        <div class="meter-row is-cool"><b>Finisher + core block</b><span class="meter-track"><span class="meter-fill" data-val="40"></span></span><span class="meter-val">40%</span></div>
+      </div>
+    </div>
+
+    <!-- WEEKLY SPLIT + PROGRESS -->
+    <div class="grid grid-3" style="grid-template-columns:1fr">
+      <div class="card dash-panel panel-hscroll">
+        <div class="dash-panel-head"><div><h3>This week&apos;s split</h3><p>6-day upper / lower block</p></div></div>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th>Day</th><th>Focus</th><th>When</th><th>State</th></tr></thead>
+            <tbody>
+              <tr><td><b>Mon</b></td><td>Upper Push</td><td>6:00 AM</td><td><span class="badge ok">Done</span></td></tr>
+              <tr><td><b>Tue</b></td><td>Aligned Mobility</td><td>9:30 AM</td><td><span class="badge ok">Done</span></td></tr>
+              <tr><td><b>Wed</b></td><td>Conditioning</td><td>6:30 AM</td><td><span class="badge ok">Done</span></td></tr>
+              <tr><td><b>Thu</b></td><td>Lower Power</td><td>6:00 AM</td><td><span class="badge gold">Today</span></td></tr>
+              <tr><td><b>Fri</b></td><td>Upper Pull</td><td>7:00 AM</td><td><span class="badge info">Booked</span></td></tr>
+              <tr><td><b>Sat</b></td><td>Corner Crew</td><td>7:30 AM</td><td><span class="badge info">Booked</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card dash-panel">
+        <div class="dash-panel-head"><div><h3>Block progress</h3><p>90-day transformation · week 6</p></div></div>
+        <div style="display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap">
+          <svg class="ring" width="110" height="110" viewBox="0 0 110 110" aria-hidden="true">
+            <defs><linearGradient id="gradRing" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b6f04e"/><stop offset="1" stop-color="#ff5d3a"/></linearGradient></defs>
+            <circle class="bgc" cx="55" cy="55" r="46"></circle>
+            <circle class="fgc" cx="55" cy="55" r="46" stroke-dasharray="289" stroke-dashoffset="52"></circle>
+            <text x="55" y="61" text-anchor="middle" fill="#f3f5f9" font-size="18" font-family="Poppins" font-weight="700" transform="rotate(90 55 55)">82%</text>
+          </svg>
+          <div style="display:grid;gap:.45rem">
+            <span class="badge ok">Aerobic base · ahead</span>
+            <span class="badge warn">Hip mobility · watch</span>
+            <span class="badge info">Body-fat −4.1% since intake</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>
